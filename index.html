@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syllabus Sprint</title>
+<meta name="description" content="A 20-day syllabus tracker for DAA, DBMS, DWDM, Cloud Computing and AI. Progress saves automatically in your browser.">
+<meta name="theme-color" content="#0c0f1a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238b7cff'/%3E%3Cpath d='M26 52l16 16 32-34' fill='none' stroke='white' stroke-width='11' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("syl20theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<main>
+<section class="hero">
+  <div>
+    <h1>Syllabus Sprint</h1>
+    <p>20 days to cover DAA, DBMS, DWDM, Cloud and AI. Tick as you go, flag what needs more work.</p>
+    <button class="themebtn" id="theme" type="button">Toggle theme</button>
+  </div>
+  <div class="stat">
+    <div class="ring"><svg viewBox="0 0 68 68"><circle class="bg" cx="34" cy="34" r="28"/><circle class="fg" id="rfg" cx="34" cy="34" r="28"/></svg><b id="rtxt">0%</b></div>
+    <div><div class="t" id="dayline">Set a start date</div><label>Start <input type="date" id="start"></label></div>
+  </div>
+</section>
+<div class="strip" id="strip"></div>
+<p class="cap">Each box fills as that day's units get done. Days 16 to 19 are revision, day 20 is the mock paper.</p>
+<nav class="nav" id="nav"></nav>
+<div id="app"></div>
+<section class="card q" id="queue">
+  <h2>Revision queue</h2>
+  <p>Units you flagged as focus more or revise more. Start here on days 16 to 19.</p>
+  <div id="qbody"></div>
+</section>
+<div class="tools">
+  <button id="export" type="button">Export backup</button>
+  <label class="imp">Import backup<input type="file" id="import" accept="application/json"></label>
+  <button id="reset" type="button">Reset all progress</button>
+</div>
+<p class="foot">Progress is saved automatically in this browser. Use export and import to move it to another device.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
